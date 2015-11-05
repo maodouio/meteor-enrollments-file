@@ -42,8 +42,9 @@ Package.onUse(function(api) {
   api.addFiles("client/enrollments/enrollments_index.html", "client");
   api.addFiles("client/enrollments/enrollments_index.js", "client");
   api.addFiles("client/enrollments/mycss.css", "client");
-  api.addFiles("public/wechat1.png", "client");
   api.addFiles("lib/collections.js");
+
+  api.addAssets("public/wechat.png", "client");
 
   api.addFiles("server/publications.js", "server");
   api.addFiles("server/fixtures.js", "server");

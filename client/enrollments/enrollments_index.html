@@ -1,46 +1,19 @@
 <template name="enrollmentsIndex">
-	<html>
-	<head>
-	  <link rel="stylesheet" type="text/css" class="__meteor-css__" href="/9c300092fcc28b293c36593bafad8b6576383d09.css?meteor_css_resource=true">
-
-
-	<script type="text/javascript">__meteor_runtime_config__ = JSON.parse(decodeURIComponent("%7B%22meteorRelease%22%3A%22METEOR%401.2.0.2%22%2C%22PUBLIC_SETTINGS%22%3A%7B%7D%2C%22ROOT_URL%22%3A%22http%3A%2F%2Fdaren.slaclinic.com%22%2C%22ROOT_URL_PATH_PREFIX%22%3A%22%22%2C%22autoupdateVersion%22%3A%223f05a337bc55f14d1388f76273c14feb632c1d7d%22%2C%22autoupdateVersionRefreshable%22%3A%22f747bf01538f4c0811767471e513d1cb86e293b0%22%2C%22autoupdateVersionCordova%22%3A%22014dff688959e95515b8de5ead86c8ccf04c6f00%22%7D"));</script>
-
-	<script type="text/javascript" src="/802b2ac690f4ec8d52533297e13269dd389388bc.js?meteor_js_resource=true"></script>
-
-	<title>报名信息</title>
-	    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
-	  <link href="/favicon.ico?v=2" sizes="any" rel="icon" />
-	</head>
-	<a class="sDarenName" href="{{pathFor 'enrollmentNew'}}" role="button">我要报名</a>
-	<body style = "-webkit-user-select:none;">
-		<div id='container'></div>
-			<div id="react-root">
-				<div data-reactid=".0">
-					<header data-reactid=".0.0"></header>
-						<main data-reactid=".0.1">
-							<div class="darenList" data-reactid=".0.1.0.0">
-								{{#each enrollments}}
-								<div class="darenBoxList" data-reactid=".0.1.0.0.0:0:0">
-									<div class="darenBox" data-reactid=".0.1.0.0.0:0:0.0">
-										<a href="{{pathFor 'enrollmentShow'}}"><img src="{{file.url}}" class="darenPhoto" data-reactid=".0.1.0.0.0:0:0.0.0" height="96" width="96"></a>
-										<p class="darenName" data-reactid=".0.1.0.0.0:0:0.0.1">{{name}}</p>
-										<!-- <p class="darenLabel" data-reactid=".0.1.0.0.0:0:0.0.2"><span data-reactid=".0.1.0.0.0:0:0.0.2.0">微信：{{wechat}}</span><span data-reactid=".0.1.0.0.0:0:0.0.2.1"></span></p>
-										<p class="darenLabel" data-reactid=".0.1.0.0.0:0:0.0.2"><span data-reactid=".0.1.0.0.0:0:0.0.2.0">手机：{{mobile}}</span><span data-reactid=".0.1.0.0.0:0:0.0.2.1"></span></p>
-										<p class="darenLabel" data-reactid=".0.1.0.0.0:0:0.0.2"><span data-reactid=".0.1.0.0.0:0:0.0.2.0">email:{{email}}</span><span data-reactid=".0.1.0.0.0:0:0.0.2.1"></span></p> -->
-										<!-- <p class="darenLabel" data-reactid=".0.1.0.0.0:0:0.0.2"><span data-reactid=".0.1.0.0.0:0:0.0.2.0">{{message}}</span><span data-reactid=".0.1.0.0.0:0:0.0.2.1"></span></p> -->
-										<p class="darenLabel" data-reactid=".0.1.0.0.0:0:0.0.2"><span data-reactid=".0.1.0.0.0:0:0.0.2.0">{{formatDate createdAt}}</span><span data-reactid=".0.1.0.0.0:0:0.0.2.1"></span></p>
-										<a class="darenLabel" href="{{pathFor 'enrollmentEdit'}}" role="button">Edit</a>
-										<a class="darenLabel delete-enrollment" href="#" role="button">Del</a>
-									</div>
-								</div>
-									{{else}}
-									还没有人报名
-									{{/each}}
+	<div>
+		<div>
+			<div class="darenList">
+				{{#each enrollments}}
+					<div class="darenBoxList">
+						<div class="darenBox">
+							<a href="{{pathFor 'enrollmentShow'}}"><img src="{{file.url}}" class="darenPhoto" height="96" width="96"></a>
+							<p class="darenName">{{name}}</p>
+							<p class="darenLabel">{{formatDate createdAt}}</p>
 						</div>
-					</main>
-				</div>
+					</div>
+				{{else}}
+					还没有人报名
+				{{/each}}
 			</div>
-	</body>
-	</html>
+		</div>
+	</div>
 </template>
