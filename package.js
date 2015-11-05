@@ -1,6 +1,6 @@
 Package.describe({
   name: 'maodouio:enrollments-file',
-  version: '0.0.1',
+  version: '0.0.2',
   // Brief, one-line summary of the package.
   summary: 'Maodou.io enrollments package, A meteor package that provides enrollments pages at /enrollments',
   //URL to the Git repository containing the source code for this package.
@@ -44,7 +44,7 @@ Package.onUse(function(api) {
   api.addFiles("client/enrollments/mycss.css", "client");
   api.addFiles("lib/collections.js");
 
-  api.addAssets("public/wechat.png", "client");
+  // api.addAssets("public/wechat.png", "client");
 
   api.addFiles("server/publications.js", "server");
   api.addFiles("server/fixtures.js", "server");
