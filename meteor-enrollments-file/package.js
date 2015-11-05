@@ -19,6 +19,7 @@ Package.onUse(function(api) {
   api.use('aldeed:collection2@2.3.3', ["server", "client"]);
   api.use('aldeed:simple-schema@1.3.2', ["server", "client"]);
   api.use('matb33:collection-hooks@0.8.0', ["server", "client"]);
+  api.use('momentjs:moment@2.10.6', ["server", "client"]);
   api.use('cfs:standard-packages@0.5.9', ["server", "client"]);
   api.use('cfs:gridfs@0.0.33', ["server", "client"]);
   api.use('cfs:filesystem@0.1.2', ["server", "client"]);
