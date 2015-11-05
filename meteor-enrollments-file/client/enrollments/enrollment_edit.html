@@ -1,0 +1,19 @@
+<template name="enrollmentEdit">
+  <h2>编辑信息</h2>
+  {{#autoForm collection="Enrollments" doc=this id="enrollmentFrom" type="update"}}
+    <fieldset>
+      {{> afQuickField name='name'}}
+      {{> afQuickField name='mobile'}}
+      {{> afQuickField name="picture"}}
+      {{> afQuickField name='email'}}
+      {{> afQuickField name='wechat'}}
+      {{> afQuickField name='message'}}
+      {{> afQuickField name='createdAt'}}
+    </fieldset>
+    <button type="submit" class="btn btn-primary">更新</button>
+    <a class="btn btn-link" role="button" href="{{pathFor 'enrollmentsIndex'}}">返回</a>
+  {{/autoForm}}
+</template>
+<template name="myFilePreview">
+  <img src="{{file.url}}" alt="{{file.original.name}}" width="150px;"/>
+</template>

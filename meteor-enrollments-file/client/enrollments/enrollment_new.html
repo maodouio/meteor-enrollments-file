@@ -1,0 +1,22 @@
+<template name="enrollmentNew">
+  <div class="container">
+      <h4><b>填写报名信息</b></h4>
+      {{#autoForm collection="Enrollments" id="enrollmentForm" type="insert"}}
+      <fieldset>
+          {{> afQuickField name='name'}}
+          {{> afQuickField name='mobile'}}
+          {{> afQuickField name="picture"}}
+          {{> afQuickField name='email'}}
+          {{> afQuickField name='wechat'}}
+          {{> afQuickField name='message'}}
+          {{> afQuickField name='createdAt'}}
+          <!-- {{> afQuickField name='createdAt'}} -->
+      </fieldset>
+      <button type="submit" class="btn btn-primary">报名</button>
+      <a class="btn btn-link" role="button" href="{{pathFor 'enrollmentsIndex'}}">返回</a> {{/autoForm}}
+    </div>
+</template>
+<template name="myFilePreview">
+  <!-- <a href="{{file.url}}">{{file.original.name}}</a> -->
+  <img src="{{file.url}}" alt="{{file.original.name}}" width="150px;"/>
+</template>
