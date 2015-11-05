@@ -54,11 +54,12 @@ EnrollmentSchema = new SimpleSchema({
   createdAt: {
     type: Date,
     label: "报名日期",
-    optional: true,
+    denyUpdate: false,
+    optional: false,
     autoform: {
       afFieldInput: {
-      type: "datetime-local"
-     }
+        type: "datetime-local"
+      }
     },
     autoValue: function() {
       if (this.isInsert) {
@@ -113,7 +114,6 @@ Enrollments.simpleSchema().messages({
   ],
   keyNotInSchema: "[label] is not allowed by the schema"
 });
-
 
 
 // Meteor methods related to collection
