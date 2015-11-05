@@ -1,61 +1,28 @@
 <template name="enrollmentShow">
-  <html>
-  <head>
-    <link rel="stylesheet" type="text/css" class="__meteor-css__" href="/9c300092fcc28b293c36593bafad8b6576383d09.css?meteor_css_resource=true">
-
-
-  <script type="text/javascript">__meteor_runtime_config__ = JSON.parse(decodeURIComponent("%7B%22meteorRelease%22%3A%22METEOR%401.2.0.2%22%2C%22PUBLIC_SETTINGS%22%3A%7B%7D%2C%22ROOT_URL%22%3A%22http%3A%2F%2Fdaren.slaclinic.com%22%2C%22ROOT_URL_PATH_PREFIX%22%3A%22%22%2C%22autoupdateVersion%22%3A%223f05a337bc55f14d1388f76273c14feb632c1d7d%22%2C%22autoupdateVersionRefreshable%22%3A%22f747bf01538f4c0811767471e513d1cb86e293b0%22%2C%22autoupdateVersionCordova%22%3A%22014dff688959e95515b8de5ead86c8ccf04c6f00%22%7D"));</script>
-
-    <script type="text/javascript" src="/802b2ac690f4ec8d52533297e13269dd389388bc.js?meteor_js_resource=true"></script>
-
-
-
-  <title>详细信息</title>
-      <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
-    <link href="/favicon.ico?v=2" sizes="any" rel="icon" />
-  </head>
-  <body style="-webkit-user-select:none">
-    <div id='container'></div>
-    <div id="react-root">
-      <div data-reactid=".0">
-        <header data-reactid=".0.0"></header>
-        <main data-reactid=".0.1.0.0">
-          <div class="blank" data-reactid=".0.1.0">
-            <div data-reactid=".0.1.0.0">
-              <div class="sdareTop" data-reactid=".0.1.0.0.0">
-                <div data-reactid=".0.1.0.0.0.0">
-                  <div class="sDarenInfoBox" data-reactid=".0.1.0.0.0.0.0">
-                    <div class="sDarenInfoBg" data-reactid=".0.1.0.0.0.0.0.0"></div>
-                      <div class="sDarenInfoCon" data-reactid=".0.1.0.0.0.0.0.1">
-                        <img class="sDarenPhoto" src="{{file.url}}" data-reactid=".0.1.0.0.0.0.0.1.0">
-                        <p class="sDarenName" data-reactid=".0.1.0.0.0.0.0.1.1">{{name}}</p>
-                        <p class="sDarenWords" data-reactid=".0.1.0.0.0.0.0.1.2">{{message}}</p>
-                      </div>
-                  </div>
-                <div class="darenIntroBox" data-reactid=".0.1.0.0.0.0.1">
-                  <div class="sPostAConLabelDaren" data-reactid=".0.1.0.0.0.0.1.0">
-                    <!-- <img src="http://daren.slaclinic.com/icons/nuts_16x16@2x.png" class="sPostAConLabelImg" data-reactid=".0.1.0.0.0.0.1.0.0"> -->
-                    <span class="darenIntroConTop" data-reactid=".0.1.0.0.0.0.1.0.1">
-                      <span class="sActListIcon glyphicon glyphicon-phone"> {{mobile}}</span> <br />
-                      <!-- <span class="sActListIcon glyphicon glyphicon-info-sign"> {{wechat}}</span> <br /> -->
-                      <img src="/wechat1.png" data-reactid=".0.1.0.0.0.0.1.0.0" height=14 width=17 ><span data-reactid=".0.1.0.0.0.0.1.0.1.0">&nbsp;&nbsp;&nbsp;{{wechat}}</span><br />
-                      <span class="sActListIcon glyphicon glyphicon-envelope"> {{email}}</span> <br />
-                      <span class="sActListIcon glyphicon glyphicon-calendar"> {{formatDate createdAt}}</span>
-                      <span class="dot" data-reactid=".0.1.0.0.0.0.1.0.1.1"></span></span><span class="darenIntroConBottom" data-reactid=".0.1.0.0.0.0.1.0.2"></span>
-                  </div>
-                </div>
-              </div>
+  <div id='container'></div>
+    <div class="blank">
+      <div class="sdareTop">
+        <div class="sDarenInfoBox">
+          <div class="sDarenInfoBg"></div>
+            <div class="sDarenInfoCon">
+              <img class="sDarenPhoto" src="{{file.url}}">
+              <p class="sDarenName">{{name}}</p>
+              <p class="sDarenWords">{{message}}</p>
             </div>
+        </div>
+        <div class="darenIntroBox">
+          <div class="sPostAConLabelDaren">
+            <span class="darenIntroConTop">
+            <span class="sActListIcon glyphicon glyphicon-phone"> {{mobile}}</span> <br />
+            <span class="sActListIcon glyphicon glyphicon-exclamation-sign"> {{wechat}}</span><br />
+            <span class="sActListIcon glyphicon glyphicon-envelope"> {{email}}</span> <br />
+            <span class="sActListIcon glyphicon glyphicon-calendar"> {{formatDate createdAt}}</span>
+            </span>
           </div>
         </div>
-      </main>
+      </div>
     </div>
-  </div>
-  <div align="center" class="sDarenName">
-      <a href="{{pathFor 'enrollmentsIndex'}}" role="button">返回</a>
-  </div>
-  </body>
-  </html>
-
-
+<div align="center" class="sDarenName">
+    <a href="{{pathFor 'enrollmentsIndex'}}" role="button">返回</a>
+</div>
 </template>
